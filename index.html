@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--Nav Menu-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/assignment-logo.png" style="height: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Terms of Use</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Calculator Types </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Finance</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Math</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Chemisty</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Statistics</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--Nav Menu-->
+    <br>
+    <br>
+    <!--Banner-->
+    <div class="mt-2 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Calculator Online</h1>
+        <p class="col-md-8 fs-4">Free digital tools for class activities, graphing, geometry, collaborative whiteboard and more -</p>
+        <a href="#calc"><button class="btn btn-primary btn-lg" type="button">Start Calculator</button></a>
+      </div>
+    </div>
+    <!--Banner-->
+    <!--Calculator-->
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <h4 class="text-center ms-3" id="calc">Basic Calculator</h4>
+        <table class="calculator">
+          <tr>
+            <td colspan="3">
+              <input class="display-box" type="text" id="result" disabled />
+            </td>
+            <!-- clear -->
+            <td>
+              <input type="button" value="C" onclick="clearScreen()" id="btn" />
+            </td>
+          </tr>
+          <tr>
+            <!-- display -->
+            <td>
+              <input type="button" value="1" onclick="display('1')" />
+            </td>
+            <td>
+              <input type="button" value="2" onclick="display('2')" />
+            </td>
+            <td>
+              <input type="button" value="3" onclick="display('3')" />
+            </td>
+            <td>
+              <input type="button" value="/" onclick="display('/')" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" value="4" onclick="display('4')" />
+            </td>
+            <td>
+              <input type="button" value="5" onclick="display('5')" />
+            </td>
+            <td>
+              <input type="button" value="6" onclick="display('6')" />
+            </td>
+            <td>
+              <input type="button" value="-" onclick="display('-')" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" value="7" onclick="display('7')" />
+            </td>
+            <td>
+              <input type="button" value="8" onclick="display('8')" />
+            </td>
+            <td>
+              <input type="button" value="9" onclick="display('9')" />
+            </td>
+            <td>
+              <input type="button" value="+" onclick="display('+')" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" value="." onclick="display('.')" />
+            </td>
+            <td>
+              <input type="button" value="0" onclick="display('0')" />
+            </td>
+            <!-- calculate function -->
+            <td>
+              <input type="button" value="=" onclick="calculate()" id="btn" />
+            </td>
+            <td>
+              <input type="button" value="*" onclick="display('*')" />
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!--Calculator-->
+      <div class="col-md-8 col-sm-8">
+        <div class="row row-cols-1 row-cols-md-4 g-2">
+          <div class="col">
+            <div class="card" style="max-width: 18rem;">
+              <img src="assets/images/health.png" class="card-img-top" alt="health">
+              <div class="card-body">
+                <h5 class="card-title">Health Calculators</h5>
+                <p class="card-text">Explore a variety of free fitness and health calculators including a BMI calculator, body fat calculator, calorie calculator, and many more </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="max-width: 18rem;">
+              <img src="assets/images/finance.png" class="card-img-top" alt="finance">
+              <div class="card-body">
+                <h5 class="card-title">Finance Calculators</h5>
+                <p class="card-text"> A compilation of free financial calculators involving mortgages, loans, investments, debt, retirement, and more </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="max-width: 18rem;">
+              <img src="assets/images/math.png" class="card-img-top" alt="math">
+              <div class="card-body">
+                <h5 class="card-title">Math Calculators</h5>
+                <p class="card-text">Math online calculators and solvers for problems including polynomial equations, rational expressions, and more</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="max-width: 18rem;">
+              <img src="assets/images/4.png" class="card-img-top" alt="graph">
+              <div class="card-body">
+                <h5 class="card-title">Statistics Calculators</h5>
+                <p class="card-text">This statistics calculator computes a number of common statistical values including standard deviation, mean,and more </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <!--Footer-->
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>Copyright &copy; KodeGo WD20P Hallace Claire Salong</small>
+      </div>
+    </footer>
+    <!--Footer-->
+    <script src="assets/calculator.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
